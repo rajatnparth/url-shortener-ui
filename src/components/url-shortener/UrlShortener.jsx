@@ -60,8 +60,11 @@ export default function UrlShortener(){
             // url: 'Enter a valid URL',
             // targetDate: 'Enter a valid targetDate'
         }
-        if(values.url == null || !isUrl(values.url))
+        if(values.url == null )
         {
+            errors.url='Not a valid URL. Please enter a correct URL'
+        }
+        if(!isUrl(values.url)){
             errors.url='Not a valid URL. Please enter a correct URL'
         }
         console.log(values)
